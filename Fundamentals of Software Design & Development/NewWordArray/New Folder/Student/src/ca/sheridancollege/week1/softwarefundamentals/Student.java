@@ -12,7 +12,8 @@ package ca.sheridancollege.week1.softwarefundamentals;
  * 
  * @author dancye May 7, 2018
  */
-public class Studentchangecomment {
+public class Student 
+{
     private String name;
 
     /**

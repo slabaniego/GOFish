@@ -9,6 +9,7 @@ package ice1;
  * @author shane
  */
 public class ICE1 {
+    
     private String FOOT;
     
     /**

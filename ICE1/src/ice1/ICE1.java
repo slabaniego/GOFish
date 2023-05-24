@@ -9,7 +9,8 @@ package ice1;
  * @author shane
  */
 public class ICE1 {
-
+    private String foo;
+    
     /**
      * @param args the command line arguments
      */

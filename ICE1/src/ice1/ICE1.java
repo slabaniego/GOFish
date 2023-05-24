@@ -9,13 +9,14 @@ package ice1;
  * @author shane
  */
 public class ICE1 {
-    private String foo;
+    private String FOOT;
     
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
     }
     
 }

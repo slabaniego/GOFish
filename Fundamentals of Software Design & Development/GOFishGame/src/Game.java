@@ -1,9 +1,13 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
 /**
  * SYST 17796 Project Base code.
  * Students can modify and extend to implement their game.
  * Add your name as an author and the date!
  */
-package cardgame;
 
 import java.util.ArrayList;
 
@@ -16,7 +20,7 @@ import java.util.ArrayList;
  */
 public abstract class Game {
 
-    private final String NAME;//the title of the game
+    private final String name;//the title of the game
     private ArrayList<Player> players;// the players of the game
 
     public Game(String name) {
@@ -28,7 +32,7 @@ public abstract class Game {
      * @return the name
      */
     public String getName() {
-        return NAME;
+        return name;
     }
 
     /**

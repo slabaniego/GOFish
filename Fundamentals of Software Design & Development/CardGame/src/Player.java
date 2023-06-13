@@ -2,11 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package cardgame;
 
 /**
+ * SYST 17796 Project Base code.
+ * Students can modify and extend to implement their game.
+ * Add your name as an author and the date!
+ */
+
+/**
+ * A class that models each Player in the game. Players have an identifier, which should be unique.
  *
- * @author shane
+ * @author dancye
+ * @author Paul Bonenfant Jan 2020
  */
 public abstract class Player {
 

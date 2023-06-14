@@ -20,7 +20,7 @@ public abstract class Game {
     private ArrayList<Player> players;// the players of the game
 
     public Game(String name) {
-        this.name = name;
+        this.NAME = name;
         players = new ArrayList();
     }
 

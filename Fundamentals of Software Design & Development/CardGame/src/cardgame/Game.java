@@ -24,6 +24,7 @@ public abstract class Game {
         players = new ArrayList();
     }
 
+    
     /**
      * @return the name
      */

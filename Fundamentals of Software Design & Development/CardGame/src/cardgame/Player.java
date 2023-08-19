@@ -1,46 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package cardgame;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- *
- * @author shane
- */
-public abstract class Player {
+public class Player {
+    private String name;
+    private List<Card> hand;
 
-    private String name; //the unique name for this player
-
-    /**
-     * A constructor that allows you to set the player's unique ID
-     *
-     * @param name the unique ID to assign to this player.
-     */
     public Player(String name) {
         this.name = name;
+        hand = new ArrayList<>();
     }
-
-    /**
-     * @return the player name
-     */
+    
     public String getName() {
         return name;
     }
-
-    /**
-     * Ensure that the playerID is unique
-     *
-     * @param name the player name to set
-     */
-    public void setName(String name) {
-        this.name = name;
+    public void drawCard(Card card) {
+        hand.add(card);
     }
 
-    /**
-     * The method to be overridden when you subclass the Player class with your specific type of Player and filled in
-     * with logic to play your game.
-     */
-    public abstract void play();
+    public Card playCard(int index) {
+        if (index < 0 || index >= hand.size()) {
+            return null; // Invalid index
+        }
+        return hand.remove(index);
+    }
 
+    public List<Card> getHand() {
+        return hand;
+    }
+
+   
 }

@@ -7,8 +7,15 @@ public class Play {
         Deck deck = new Deck();
         deck.shuffle();
 
-        Player player1 = new Player("Player 1");
-        Player player2 = new Player("Player 2");
+        // Getting player1 and player 2 details 
+        System.out.println("Enter player 1 name: ");
+        String playerName = scanner.nextLine();
+        Player player1 = new Player(playerName);
+        
+        System.out.println("Enter player 2 name: ");
+        String playerName2 = scanner.nextLine();
+        Player player2 = new Player(playerName2);
+
 
         // Distribute initial cards to players
         for (int i = 0; i < 7; i++) {
@@ -17,7 +24,7 @@ public class Play {
         }
 
         Card topCard = deck.drawCard();
-        System.out.println("Top card: " + topCard);
+        System.out.println("Top card: " + topCard);       
 
         Player currentPlayer = player1;
         boolean gameEnded = false;
@@ -37,11 +44,12 @@ public class Play {
 
             if (canPlay) {
                 // Player can play a card
-                System.out.println("Enter the index of the card to play:");
+                System.out.println("Enter the index of the card to play: ");
                 int cardIndex = scanner.nextInt();
                 Card playedCard = currentPlayer.playCard(cardIndex);
 
-                if (playedCard != null && (playedCard.getColor().equals(topCard.getColor()) || playedCard.getValue().equals(topCard.getValue()))) {
+                if (playedCard != null && (playedCard.getColor().equals(topCard.getColor()) || playedCard.getValue().equals(topCard.getValue()) 
+                    || playedCard.getValue() == "Wild" || playedCard.getValue() == "Wild Draw 4")) {
                     System.out.println(currentPlayer.getName() + " played: " + playedCard);
                     topCard = playedCard;
 
@@ -54,7 +62,7 @@ public class Play {
                 }
             } else {
                 // Player must draw a card
-                System.out.println("You don't have a playable card. Drawing a card...");
+                System.out.println("No playable card. Drawing a card.");
                 Card drawnCard = deck.drawCard();
 
                 if (drawnCard != null) {

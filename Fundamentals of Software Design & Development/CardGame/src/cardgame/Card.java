@@ -15,7 +15,7 @@ public class Card {
         return value;
     }
 
-    @Override
+       @Override
     public String toString() {
         return color + " " + value;
     }

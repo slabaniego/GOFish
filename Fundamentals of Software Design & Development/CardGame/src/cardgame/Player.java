@@ -9,7 +9,7 @@ public class Player {
         this.name = name;
         hand = new ArrayList<>();
     }
-    
+
     public String getName() {
         return name;
     }
@@ -19,7 +19,7 @@ public class Player {
 
     public Card playCard(int index) {
         if (index < 0 || index >= hand.size()) {
-            return null; // Invalid index
+            return null; 
         }
         return hand.remove(index);
     }

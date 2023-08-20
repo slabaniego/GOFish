@@ -2,18 +2,18 @@ import java.util.Scanner;
 
 public class Play {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         Deck deck = new Deck();
         deck.shuffle();
 
         // Getting player1 and player 2 details 
         System.out.println("Enter player 1 name: ");
-        String playerName = scanner.nextLine();
+        String playerName = inout.nextLine();
         Player player1 = new Player(playerName);
         
         System.out.println("Enter player 2 name: ");
-        String playerName2 = scanner.nextLine();
+        String playerName2 = input.nextLine();
         Player player2 = new Player(playerName2);
 
 
@@ -45,7 +45,7 @@ public class Play {
             if (canPlay) {
                 // Player can play a card
                 System.out.println("Enter the index of the card to play: ");
-                int cardIndex = scanner.nextInt();
+                int cardIndex = input.nextInt();
                 Card playedCard = currentPlayer.playCard(cardIndex);
 
                 if (playedCard != null && (playedCard.getColor().equals(topCard.getColor()) || playedCard.getValue().equals(topCard.getValue()) 

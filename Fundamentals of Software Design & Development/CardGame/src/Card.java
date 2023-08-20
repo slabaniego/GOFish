@@ -1,29 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+public class Card {
+    private String color;
+    private String value;
 
-/**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
- */
+    public Card(String color, String value) {
+        this.color = color;
+        this.value = value;
+    }
 
-/**
- * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
- * game. Students wishing to add to the code should remember to add themselves as a modifier.
- *
- * @author dancye
- */
-public abstract class Card {
-    //default modifier for child classes
+    public String getColor() {
+        return color;
+    }
 
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
-    @Override
-    public abstract String toString();
+    public String getValue() {
+        return value;
+    }
 
+       @Override
+    public String toString() {
+        return color + " " + value;
+    }
 }
